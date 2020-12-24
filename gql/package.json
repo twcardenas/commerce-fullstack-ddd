@@ -1,0 +1,29 @@
+{
+  "name": "demo-apollo-server-lambda",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon src/apollo-server.ts"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.19.1",
+    "apollo-server-lambda": "^2.16.1",
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "graphql": "^15.4.0",
+    "graphql-type-json": "^0.3.2",
+    "subscriptions-transport-ws": "^0.9.18"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.9",
+    "nodemon": "^2.0.6",
+    "serverless-dotenv-plugin": "^3.0.0",
+    "serverless-offline": "^6.5.0",
+    "serverless-webpack": "^5.3.3",
+    "ts-loader": "^8.0.2",
+    "typescript": "^3.9.7",
+    "webpack": "^4.44.1",
+    "webpack-node-externals": "^2.5.0"
+  }
+}

@@ -15,5 +15,6 @@ type Query {
 
   type Order {
     orderNumber: ID!
+    fulfillment: String
   }
 `;

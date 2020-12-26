@@ -7,8 +7,13 @@ import express from "express";
 import { resolvers } from './resolvers';
 import { typeDefs } from './type-defs';
 import { SubscriptionServer } from 'subscriptions-transport-ws';
+import { RedisPubSub } from 'graphql-redis-subscriptions';
+import Redis from 'ioredis';
 
-export const pubsub = new PubSub();
+export const pubsub = new RedisPubSub({
+  publisher: new Redis(),
+  subscriber: new Redis()
+});
 const apolloServer = new ApolloServer({ 
     resolvers, 
     typeDefs,
